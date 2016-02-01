@@ -7,6 +7,11 @@ class Hydralab extends CI_Controller {
 	}
 
 	function index(){
+		$this->load->view('hydralab/headers');
+		$this->load->view('hydralab/bienvenido');
+	}
+	function holaMundo(){
+		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/bienvenido');
 	}
 
