@@ -15,7 +15,7 @@
   <br><br>
  <?= form_label('Numero videos: ', 'videos')?>
  <?= form_input($videos)?>
- <br><br>
+ <br><br> 
  <?= form_submit('','Subir curso ') ?>
 <?= form_close() ?>
  </body>
