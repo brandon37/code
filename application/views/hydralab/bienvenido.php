@@ -1,5 +1,5 @@
 <body>
 		<h1>Llamado desde el controlador hydralab</h1>
-		<?= getNombre();  ?>
+		<?= $mi_menu; ?>
 </body>
 </html>
