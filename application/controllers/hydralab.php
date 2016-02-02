@@ -4,10 +4,11 @@ class Hydralab extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
+		$this->load->helper('form');
 	}
 
 	function index(){
-		$this->load->library("menu",array('Inicio', 'Contactos', 'Cursos'));
+		$this->load->library("menu",array('Inicio', 'Contactos', 'Cursos', 'Acerca de'));
 		$data['mi_menu'] = $this->menu->construirMenu();
 		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/bienvenido',$data);
@@ -15,6 +16,10 @@ class Hydralab extends CI_Controller {
 	function holaMundo(){
 		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/bienvenido');
+	}
+	function nuevo(){
+		$this->load->view('hydralab/headers');
+		$this->load->view('hydralab/formulario');
 	}
 
 }
