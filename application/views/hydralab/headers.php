@@ -6,3 +6,4 @@
 	<title>Bienvenido a hydralab</title>
 	<link rel="stylesheet" href="">
 </head>
+<body>
