@@ -5,6 +5,7 @@ class Hydralab extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('form');
+		$this->load->model('hydralab_model');
 	}
 
 	function index(){
@@ -20,6 +21,15 @@ class Hydralab extends CI_Controller {
 	function nuevo(){
 		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/formulario');
+	}
+	function recibirDatos(){
+		$data = array(
+			'nombre'=> $this->input->post('nombre'),
+			'videos'=> $this->input->post('videos') 
+			);
+		$this->hydralab_model->crearCurso($data);
+		$this->load->view('hydralab/headers');
+		$this->load->view('hydralab/bienvenido');
 	}
 
 }
