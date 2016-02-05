@@ -5,7 +5,7 @@ class Hydralab_model  extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
-	public function crearCurso(){
+	public function crearCurso($data){
 		$this->db->insert('cursos',array('nombreCurso'=>$data['nombre'],'videosCurso'=>$data['videos']));
 	}
 

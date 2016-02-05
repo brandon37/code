@@ -22,12 +22,12 @@ class Hydralab extends CI_Controller {
 		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/formulario');
 	}
-	function recibirdatos(){
+	function recibirDatos(){
 		$data = array(
 			'nombre'=> $this->input->post('nombre'),
 			'videos'=> $this->input->post('videos') 
 			);
-		$this->load->model->hydralab_model->crearCurso($data);
+		$this->hydralab_model->crearCurso($data);
 		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/bienvenido');
 	}
