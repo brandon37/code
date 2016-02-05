@@ -1,4 +1,4 @@
- <?= form_open("/cursos/recibirdatos/"."<?= $id  ?>") ?>
+ <?= form_open("/cursos/actualizar") ?>
  <?php
  		$nombre = array(
  		 'name' => 'nombre',
@@ -16,7 +16,7 @@
  <?= form_label('Numero videos: ', 'videos')?>
  <?= form_input($videos)?>
  <br><br> 
- <?= form_submit('','Subir curso ') ?>
+ <?= form_submit('','Actualizar Curso ') ?>
 <?= form_close() ?>
  </body>
  </html>
