@@ -18,19 +18,7 @@ class Hydralab extends CI_Controller {
 		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/bienvenido');
 	}
-	function nuevo(){
-		$this->load->view('hydralab/headers');
-		$this->load->view('hydralab/formulario');
-	}
-	function recibirDatos(){
-		$data = array(
-			'nombre'=> $this->input->post('nombre'),
-			'videos'=> $this->input->post('videos') 
-			);
-		$this->hydralab_model->crearCurso($data);
-		$this->load->view('hydralab/headers');
-		$this->load->view('hydralab/bienvenido');
-	}
+
 
 }
 ?>
