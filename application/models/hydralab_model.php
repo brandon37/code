@@ -19,7 +19,7 @@ class Hydralab_model  extends CI_Model {
 		if($query->num_rows() >0) return $query;
 		else return false;
 	}
-	function actualizarCurso($id,$data){
+	 function actualizarCurso($id,$data){
 		$datos = array(
 			'nombreCurso'=>$data['nombre'],
 			'videosCurso'=>$data['videos']
