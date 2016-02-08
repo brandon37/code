@@ -8,8 +8,8 @@
  		 'name' => 'videos',
  		 'placeholder' => 'Cantidad videos'
  		);
-
   ?>
+  
   <?= form_label('Nombre: ', 'nombre')?>
   <?= form_input($nombre)?>
   <br><br>

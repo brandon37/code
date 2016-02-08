@@ -28,4 +28,4 @@ class Hydralab_model  extends CI_Model {
 		$query = $this->db->update('cursos',$datos);
 	}
 }	
-?>
+?> 

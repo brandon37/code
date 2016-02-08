@@ -31,7 +31,7 @@ class Cursos extends CI_Controller {
 		$this->load->view('hydralab/bienvenido');
 	}
 	function editar(){
-		$data['id'] = $idCurso = $this->uri->segment(3);
+		$data['id'] = $this->uri->segment(3);
 		$data['curso'] = $this->hydralab_model->obtenerCurso($data['id']);
 		$this->load->view('hydralab/headers');
 		$this->load->view('cursos/editar',$data);
@@ -41,7 +41,7 @@ class Cursos extends CI_Controller {
 			'nombre'=> $this->input->post('nombre'),
 			'videos'=> $this->input->post('videos') 
 		);
-		$this->hydralab_model->actualizarCurso($this->uri->segment(3),$data );
+		$this->hydralab_model->actualizarCurso($this->uri->segment(3),$data);
 		$this->load->view('hydralab/headers');
 		$this->load->view('hydralab/bienvenido'); 
 	}
