@@ -36,6 +36,10 @@ class Cursos extends CI_Controller {
 		$this->load->view('hydralab/headers');
 		$this->load->view('cursos/editar',$data);
 	}
+	function borrar(){
+		$id = $this->uri->segment(3);
+		$this->hydralab_model->eliminarCurso($id);
+	}
 	function actualizar(){
 		$data = array(
 			'nombre'=> $this->input->post('nombre'),
