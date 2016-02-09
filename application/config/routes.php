@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "welcome";
+$route['nuevo'] = "cursos/nuevo";
 $route['404_override'] = '';
 
 
