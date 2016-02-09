@@ -46,8 +46,7 @@ class Cursos extends CI_Controller {
 			'videos'=> $this->input->post('videos') 
 		);
 		$this->hydralab_model->actualizarCurso($this->uri->segment(3),$data);
-		$this->load->view('hydralab/headers');
-		$this->load->view('hydralab/bienvenido'); 
+		redirect(base_url());
 	}
 
 }
