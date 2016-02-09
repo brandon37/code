@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$dato['string'] = ":Dhola";
+		$dato['headers'] = $this->load->view('hydralab/headers.php','',TRUE);
 		$this->load->view('welcome_message', $dato);
 	}
 }

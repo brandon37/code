@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Curso de CodeIgniter</title>
-
-</head>
-<body>
-
-<div id="container">
+ <?= $headers ?>
 	<h1><?=$string?> mundo</h1>
 
 	
