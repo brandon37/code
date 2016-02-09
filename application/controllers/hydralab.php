@@ -19,6 +19,22 @@ class Hydralab extends CI_Controller {
 		$this->load->view('hydralab/bienvenido');
 	}
 
+	function senDMail(){
+		$this->load->library('email');
+		$this->email->from('brandon@hydralab.mx','Brandon Rosales');
+		$this->email->to('brandonedu9@gmail.com');
+
+		$this->email->subject('Probando CodeIgniter');
+		$this->email->message('Probandooo... Probandooo...');
+
+		if($this->email->send()){
+			 $this->load->view('hydralab/headers');
+			 echo($this->email->print_debugger());
+		}
+		else{
+			 echo($this->email->print_debugger());
+		}
+	}
 
 }
 ?>
